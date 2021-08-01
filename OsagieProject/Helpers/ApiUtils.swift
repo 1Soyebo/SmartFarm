@@ -13,7 +13,6 @@ class ApiUtil{
     static var successBool = "status"
     static var message = "message"
     static var errorMssg = "errorMssg"
-    static let myHeader:HTTPHeaders = ["Authorization":"TlhSa1JVYms1cFZqTkNkRmRIZUd0T1ZtOTZWbXBPWVZuHe90r2kp1VFVkRmVWZHRkR0Zokd0NQ=="]
     
     static func postRequest(viewController:UIViewController,endpoint:String,params:Parameters,displayErrorAsAlert:Bool, jsonHandler: @escaping (AFDataResponse<Any>) -> Void, showHUd: Bool = false){
         Connectivity.isConnectedToInternet(viewcontroller: viewController)
@@ -23,7 +22,7 @@ class ApiUtil{
 
         }
         
-        AF.request(HelperClass.baseUrl + endpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: myHeader)
+        AF.request(endpoint, method: .post, parameters: params, encoding: JSONEncoding.default)
             .validate(statusCode: 200..<300)
             .responseJSON{
                 response in
@@ -75,8 +74,8 @@ class ApiUtil{
     static func getRequest(viewController:UIViewController,endpoint:String,customError:Bool, jsonHandler:@escaping (AFDataResponse<Any>)->Void, onFailure:@escaping ()-> Void){
         Connectivity.isConnectedToInternet(viewcontroller: viewController)
 //        HUD.show(.progress)
-        print(HelperClass.baseUrl+endpoint)
-        AF.request(HelperClass.baseUrl+endpoint,headers: myHeader)
+        print(endpoint)
+        AF.request(endpoint)
             .validate(statusCode: 200..<300)
             .responseJSON{
             response in
@@ -99,20 +98,10 @@ class ApiUtil{
                     }
                     //print(json)
                     print("K")
-//                    let success = json[successBool] as! Bool
-//                    var errMSg = json[errorMessage] as! String
-//                    if success{
+
                         HUD.hide()
                         jsonHandler(response)
-//                    }else{
-//                        if customError{
-//                            onFailure()
-//                        }else{
-//                            errMSg = errMSg == "" ? "Something went wrong":errMSg
-//                            displayErrorMessageAsAlert(viewcontroller: viewController, errorMessage: errMSg)
-//                            //HUD.flash(.labeledError(title: "Error", subtitle: errMSg),delay: 1)
-//                        }
-//                    }
+
                 case .failure(let error):
                     HUD.flash(.label(error.localizedDescription), delay: 1)
                     //displayErrorMessageAsAlert(viewcontroller: viewController, errorMessage: )

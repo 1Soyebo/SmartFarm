@@ -10,6 +10,7 @@ target 'OsagieProject' do
   pod 'PKHUD'
   pod 'Charts'
   pod 'DateToolsSwift'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
 end
