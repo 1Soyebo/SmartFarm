@@ -7,5 +7,9 @@ target 'OsagieProject' do
 
   # Pods for OsagieProject
   pod "Alamofire"
+  pod 'PKHUD'
+  pod 'Charts'
+  pod 'DateToolsSwift'
+
 
 end

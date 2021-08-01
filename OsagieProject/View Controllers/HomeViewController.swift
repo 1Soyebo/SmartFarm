@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    let hmmEndpoint = "https://api.thingspeak.com/channels/1419598/feeds.json?api_key=SWN0URWO02UU9SAS"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,12 @@ class HomeViewController: UIViewController {
     }
     
 
-    
+    fileprivate func callApiFromThingSpeak(){
+        ApiUtil.getRequest(viewController: self, endpoint: hmmEndpoint, customError: false, jsonHandler: {
+            response in
+            let k = response.value as? [String:Any]
+            
+        }, onFailure: {})
+    }
 
 }
