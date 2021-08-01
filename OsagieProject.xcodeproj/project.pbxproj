@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1B34471DEC4D7DDAFA04D096 /* Pods_OsagieProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762B3360176C05BA0F55C5C5 /* Pods_OsagieProject.framework */; };
 		2B08ACBC26B7246B00A63475 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08ACBB26B7246B00A63475 /* HomeViewController.swift */; };
+		2B08ACC626B7273200A63475 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08ACC526B7273200A63475 /* DetailViewController.swift */; };
 		2B8DA14026B15F0D008DFEF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA13F26B15F0D008DFEF2 /* AppDelegate.swift */; };
 		2B8DA14226B15F0D008DFEF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA14126B15F0D008DFEF2 /* SceneDelegate.swift */; };
 		2B8DA14426B15F0D008DFEF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA14326B15F0D008DFEF2 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2B08ACBB26B7246B00A63475 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2B08ACC526B7273200A63475 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2B8DA13C26B15F0D008DFEF2 /* OsagieProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OsagieProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8DA13F26B15F0D008DFEF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B8DA14126B15F0D008DFEF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B08ACC826B7273A00A63475 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B08ACBB26B7246B00A63475 /* HomeViewController.swift */,
+				2B08ACC526B7273200A63475 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		2B8DA13326B15F0D008DFEF2 = {
 			isa = PBXGroup;
 			children = (
@@ -65,10 +76,10 @@
 		2B8DA13E26B15F0D008DFEF2 /* OsagieProject */ = {
 			isa = PBXGroup;
 			children = (
+				2B08ACC826B7273A00A63475 /* View Controllers */,
 				2B8DA13F26B15F0D008DFEF2 /* AppDelegate.swift */,
 				2B8DA14126B15F0D008DFEF2 /* SceneDelegate.swift */,
 				2B8DA14326B15F0D008DFEF2 /* ViewController.swift */,
-				2B08ACBB26B7246B00A63475 /* HomeViewController.swift */,
 				2B8DA14526B15F0D008DFEF2 /* Main.storyboard */,
 				2B8DA14826B15F11008DFEF2 /* Assets.xcassets */,
 				2B8DA14A26B15F11008DFEF2 /* LaunchScreen.storyboard */,
@@ -83,7 +94,6 @@
 				9176F9425F92EFE18E88E0B2 /* Pods-OsagieProject.debug.xcconfig */,
 				D2A62FBEC4ABEB17B1E13237 /* Pods-OsagieProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +116,7 @@
 				2B8DA13826B15F0D008DFEF2 /* Sources */,
 				2B8DA13926B15F0D008DFEF2 /* Frameworks */,
 				2B8DA13A26B15F0D008DFEF2 /* Resources */,
+				E9851840ED2C94452B303162 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +195,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E9851840ED2C94452B303162 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OsagieProject/Pods-OsagieProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OsagieProject/Pods-OsagieProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OsagieProject/Pods-OsagieProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -193,6 +221,7 @@
 			files = (
 				2B8DA14426B15F0D008DFEF2 /* ViewController.swift in Sources */,
 				2B8DA14026B15F0D008DFEF2 /* AppDelegate.swift in Sources */,
+				2B08ACC626B7273200A63475 /* DetailViewController.swift in Sources */,
 				2B8DA14226B15F0D008DFEF2 /* SceneDelegate.swift in Sources */,
 				2B08ACBC26B7246B00A63475 /* HomeViewController.swift in Sources */,
 			);

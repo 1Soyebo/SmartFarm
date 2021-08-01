@@ -6,5 +6,6 @@ target 'OsagieProject' do
   use_frameworks!
 
   # Pods for OsagieProject
+  pod "Alamofire"
 
 end
