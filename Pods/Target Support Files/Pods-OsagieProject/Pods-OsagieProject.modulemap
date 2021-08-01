@@ -1,0 +1,6 @@
+framework module Pods_OsagieProject {
+  umbrella header "Pods-OsagieProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
