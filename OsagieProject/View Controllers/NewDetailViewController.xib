@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewDetailViewController" customModule="OsagieProject" customModuleProvider="target">
             <connections>
+                <outlet property="collThingSpeak" destination="tef-aX-MzS" id="LN2-k5-7nD"/>
+                <outlet property="pageControlOsagie" destination="9Oa-YT-saT" id="t4f-B8-WQw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

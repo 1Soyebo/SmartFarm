@@ -76,6 +76,7 @@
 		2B08ACCA26B727D700A63475 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2B08ACE926B7BC5700A63475 /* HelperClass.swift */,
 				2B08ACCB26B7280000A63475 /* ApiUtils.swift */,
 				2B08ACCC26B7280000A63475 /* Connectivity.swift */,
 			);
@@ -86,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				2B08ACD626B7291500A63475 /* Models.swift */,
-				2B08ACE926B7BC5700A63475 /* HelperClass.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

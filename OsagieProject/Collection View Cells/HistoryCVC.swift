@@ -75,7 +75,7 @@ class HistoryCVC: UICollectionViewCell {
         historyLineChart.data = data
     }
     
-    func convertToChartDataEntry(array_adafruit: [ThingSpeakFieldValues], isInstanteous:Bool){
+    func convertToChartDataEntry(array_adafruit: [ThingSpeakFieldValues]){
         var m = 0.0
         array_chart_data_entry = []
         if array_adafruit.count > 0{
@@ -83,7 +83,7 @@ class HistoryCVC: UICollectionViewCell {
                 m = m + 1
                 
 //                let single_chart_data_entry = ChartDataEntry(x:m, y: isInstanteous ? single_adafruit.kiloWattHour: single_adafruit.cumulativePower)
-                let single_chart_data_entry = BarChartDataEntry(x:m, y: Double(single_adafruit.value) )
+                let single_chart_data_entry = ChartDataEntry(x: m, y: Double(single_adafruit.value))
                 array_chart_data_entry.append(single_chart_data_entry)
                 historyLineChart.xAxis.valueFormatter = DateValueFormatter(objects: array_adafruit)
             }

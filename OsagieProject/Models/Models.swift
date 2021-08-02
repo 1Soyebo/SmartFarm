@@ -27,6 +27,7 @@ class ThingSpeakField {
 struct ThingSpeakFieldValues{
     var value:Int = 0
     var wholeDate = Date()
+    var actualDate = Date()
     var actualTime = Date()
 //    var date = Date()
 }
