@@ -1,13 +1,13 @@
 //
-//  DetailViewController.swift
+//  NewDetailViewController.swift
 //  OsagieProject
 //
-//  Created by Ibukunoluwa Soyebo on 01/08/2021.
+//  Created by Ibukunoluwa Soyebo on 02/08/2021.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class NewDetailViewController: UIViewController {
     
     var singleThingSpeakhmm: ThingSpeakField?
 
@@ -15,14 +15,9 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         title = singleThingSpeakhmm?.fieldTitle
 
-
         // Do any additional setup after loading the view.
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+
 
     /*
     // MARK: - Navigation
