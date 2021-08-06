@@ -28,6 +28,8 @@ class NewDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = singleThingSpeakhmm?.fieldTitle
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.barTintColor = .white
         getAllTheDatesAndSortThem()
         configureColledtionView()
        

@@ -11,17 +11,36 @@ import PKHUD
 
 class HomeViewController: UIViewController {
     
+    
+    @IBOutlet var btnMenuTitles: [UIButton]!
+    
     let hmmEndpoint = "https://api.thingspeak.com/channels/1419598/feeds.json?api_key=SWN0URWO02UU9SAS"
     var arrayResponseFromJSON:[ThingSpeakField] = []
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Smart Farm"
+       
+
         callApiFromThingSpeak{
             
         }
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        btnMenuTitles.forEach{
+            $0.layer.cornerRadius = $0.frame.height/2
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = .black
+
     }
     
     @IBAction func temperatureTapped(_ sender: Any) {
